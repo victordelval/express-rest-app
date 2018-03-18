@@ -17,18 +17,22 @@ Development and production dependencies:
 ```
   "scripts": {
     "start": "node --require 'babel-register' src/index.js",
+    "lint": "standard 'src/**/*.js'",
+    "build": "babel src -d dist",
     "watch": "nodemon",
     "test": "NODE_ENV=test mocha --compilers js:babel-register --timeout 10000 tests/"
   },
   "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-register": "^6.26.0",
     "mocha": "^5.0.4",
     "nodemon": "^1.14.12",
+    "pm2": "^2.10.1",
     "supertest": "^3.0.0"
   },
   "dependencies": {
-    "babel-cli": "^6.26.0",
     "body-parser": "^1.18.2",
     "cors": "^2.8.4",
     "dotenv": "^5.0.1",
@@ -81,3 +85,12 @@ Runs the app with nodemon. Nodemon is a utility that will monitor for any change
 ### `npm run test`
 
 Note that the development server must be stopped to run the tests.
+
+### `npm run build`
+
+Transpile the code to the configured node version. From the 'src' folder to the 'dist' folder.
+
+### `pm2 start dist/index.js`
+### `pm2 monit`
+
+Monitoring the node server with pm2.
