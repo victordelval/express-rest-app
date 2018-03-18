@@ -1,6 +1,7 @@
 import express from 'express'
 
 import mocks from '../../mocks'
+import { auth } from '../middlewares'
 
 const router = express.Router()
 
@@ -9,7 +10,7 @@ router
         res.status(200)
             .json(mocks)
     })
-    .post('/', (req, res, next) => {
+    .post('/', auth, (req, res, next) => {
         console.log('Body received', req.body)
         res.status(201)
             .json(req.body)
