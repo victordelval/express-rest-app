@@ -34,7 +34,8 @@ Development and production dependencies:
     "dotenv": "^5.0.1",
     "express": "^4.16.3",
     "jwt-simple": "^0.5.1",
-    "morgan": "^1.9.0"
+    "morgan": "^1.9.0",
+    "ws": "^5.0.0"
   }
 ```
 
