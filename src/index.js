@@ -1,5 +1,6 @@
 import express from 'express'
 import config from './config'
+import router from './router'
 
 let _server
 
@@ -8,27 +9,7 @@ const server = {
         const app = express()
 
         config(app)
-
-        // Routes
-        app.get('/', (req, res, next) => {
-            res.status(200)
-                .json({ data: 'Metodo get'})
-        })
-
-        app.post('/', (req, res, next) => {
-            res.status(201)
-                .json({ data: 'Metodo post'})
-        })
-
-        app.put('/', (req, res, next) => {
-            res.status(201)
-                .json({ data: 'Metodo put'})
-        })
-
-        app.delete('/', (req, res, next) => {
-            res.status(200)
-                .json({ data: 'Metodo delete'})
-        })
+        router(app)
 
         _server = app.listen('9000', () => {
             if (process.env.NODE_ENV !== 'test') {
