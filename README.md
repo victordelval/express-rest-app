@@ -15,13 +15,31 @@ The objective of the project is to create a basic Express backend exposing a RES
 Development and production dependencies:
 
 ```
+  "scripts": {
+    "start": "node --require 'babel-register' src/index.js",
+    "watch": "nodemon",
+    "test": "NODE_ENV=test mocha --compilers js:babel-register --timeout 10000 tests/"
+  },
   "devDependencies": {
-      ...
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.26.0",
+    "chai": "^4.1.2",
+    "cheerio": "^1.0.0-rc.2",
+    "got": "^8.3.0",
+    "mocha": "^5.0.4",
+    "nodemon": "^1.14.12"
   },
   "dependencies": {
-      ...
+    "babel-cli": "^6.26.0",
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "dotenv": "^5.0.1",
+    "express": "^4.16.3",
+    "morgan": "^1.9.0"
   }
 ```
+
+Api development using Postman
 
 ### Testing
 
