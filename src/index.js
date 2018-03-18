@@ -14,8 +14,8 @@ const server = {
         router(app)
 
         _server = app.listen('9000', () => {
-            // connect to websocket
-            connect()
+            // DISABLED - connect to websocket
+            // connect()
 
             //
             const address = _server.address()

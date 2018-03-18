@@ -8,7 +8,8 @@ const router = express.Router()
 
 router
     .get('/', (req, res, next) => {
-        wSend(req.method, req.baseUrl, mocks)
+        // DISABLED
+        // wSend(req.method, req.baseUrl, mocks)
         res.status(200)
             .json(mocks)
     })
@@ -21,8 +22,8 @@ router
 router.get('/:singer', (req, res, next) => {
     const songsBySinger = mocks
         .filter(item => item.singer.toLowerCase() === req.params.singer.toLowerCase())
-
-    wSend(req.method, req.baseUrl, songsBySinger)
+    // DISABLED
+    // wSend(req.method, req.baseUrl, songsBySinger)
 
     res.status(200)
         .json(songsBySinger )
