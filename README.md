@@ -25,7 +25,7 @@ Development and production dependencies:
 
 ### Testing
 
-...
+npm i --save-dev got chai cheerio mocha
 
 
 ## Project Structure
