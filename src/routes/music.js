@@ -1,6 +1,6 @@
 import express from 'express'
 
-import mocks from '../../mocks'
+import mocks from '../mocks'
 import { auth } from '../middlewares'
 import { send as wSend } from '../socket'
 

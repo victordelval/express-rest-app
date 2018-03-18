@@ -1,7 +1,7 @@
 import request from 'supertest'
 
 import server from '../src'
-import mocks from '../mocks'
+import mocks from '../src/mocks'
 
 describe('Music', () => {
 
