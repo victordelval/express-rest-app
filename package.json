@@ -1,0 +1,25 @@
+{
+  "name": "express-rest-app",
+  "version": "1.0.0",
+  "description": "Exercise with NodeJS and Express to build a REST API",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/victordelval/express-rest-app.git"
+  },
+  "keywords": [
+    "Express",
+    "NodeJS",
+    "REST",
+    "API"
+  ],
+  "author": "Victor del Val",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/victordelval/express-rest-app/issues"
+  },
+  "homepage": "https://github.com/victordelval/express-rest-app#readme",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
